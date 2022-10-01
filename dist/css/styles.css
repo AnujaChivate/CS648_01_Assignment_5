@@ -1,3 +1,7 @@
+/*
+    - Mixins with default parameters for each.
+    - Mixin for media queries
+*/
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
@@ -134,6 +138,9 @@ header {
         color: #ffffff;
         font-size: 1em; } }
 
+/*
+    Use of mixins and math operations
+*/
 #headline {
   width: 100%;
   height: 130px;
@@ -193,6 +200,9 @@ header {
       float: none;
       margin: 0 2%; } }
 
+/*
+    Footer styles with mixins included
+*/
 .greybar {
   width: 100%;
   height: 90px;
@@ -215,12 +225,7 @@ footer {
       text-align: center; } }
   footer .social-media {
     margin: 0 auto;
-    width: 165px;
-    /* 
-        div.one       {background:url($socialmediabg) 0 0;}
-        div.two 	    {background:url($socialmediabg) -38px 0;}
-        div.three     {background:url($socialmediabg) -76px 0;}
-        div.four 	    {background:url($socialmediabg) -114px 0;}*/ }
+    width: 165px; }
     footer .social-media div {
       float: left;
       margin-right: 5px; }
