@@ -1,0 +1,34 @@
+/*
+    - Mixins with default parameters for each.
+    - Mixin for media queries
+*/
+@mixin headers($clor: $grey, $fnt-wt: 400, $fnt-sz: 2em, $ln-ht: 0){
+    color: $clor;
+    font-weight: $fnt-wt;
+    font-size: $fnt-sz;
+    line-height: $ln-ht;
+    }
+    
+    @mixin size($wt: 100%, $ht: 100px){
+        width:$wt;
+        height:$ht;
+    }
+    
+    @mixin navigation($wt: 400px, $ht: 190px, $float: left){
+        @include size($wt, $ht);
+        float: $float;
+        }
+    
+    @mixin contents($wt: 460px, $flt: left){
+        width: $wt;
+        float: $flt;
+    }
+    
+    @mixin break($args: 459px){
+        @if length($args) == 1{
+            @media (max-width: nth($args, 1)){
+                @content;
+        }
+       
+        }
+    }
